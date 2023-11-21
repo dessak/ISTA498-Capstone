@@ -4,14 +4,13 @@ __credits__ = ["Data sourced from Bundesamt fur Strahlenschutz"]
 __email__ = "ncutler211@gmail.com"
 """
 
-# Imports
+# Required libraries
 import pandas as pd
 import os
 import numpy as np
 import matplotlib.pyplot as plt
-import psycopg2
-from sqlalchemy import create_engine
 
+# Function to read data into a DataFrame
 def read_data_into_dataframe(directory):
     """
     Reads data from .dat files in a specified directory into a Pandas DataFrame and combines them.
@@ -21,10 +20,6 @@ def read_data_into_dataframe(directory):
 
     Returns:
         pd.DataFrame: A combined DataFrame with data from all .dat files in the directory.
-
-    Example:
-        directory = "F:/UofA/ISTA_498_Capstone/Data ETL/Germany/Extract/data/Uncompressed Original"
-        combined_data = read_data_into_dataframe(directory)
     """
     datafiles = []
 
@@ -48,6 +43,7 @@ def read_data_into_dataframe(directory):
 
     return combined_data
 
+# Function for data transformations
 def transformations(combined_data):
     """
     Perform data transformations on a Pandas DataFrame.
@@ -82,6 +78,7 @@ def transformations(combined_data):
     combined_data = combined_data[["start_date", "end_date", "reading", "unit", "city", "state", "cid", "lat", "long", "comment"]]
     return combined_data
 
+# Function to plot the data
 def plot1(transformed_data):
     # Resample the data to a monthly average
     resampled_data = transformed_data.resample('M', on='start_date').mean()
@@ -95,11 +92,13 @@ def plot1(transformed_data):
     plt.grid(True)
     plt.show()
 
-
-
+# Main function
 def main():
     directory = r"F:\UofA\ISTA_498_Capstone\Data ETL\Germany\Extract\data\Uncompressed Original"
     combined_data = read_data_into_dataframe(directory)
     transformed_data = transformations(combined_data)
     plot1(transformed_data)
-    plot1()
+
+# Call the main function
+if __name__ == "__main__":
+    main()
