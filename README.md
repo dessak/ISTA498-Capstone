@@ -7,20 +7,21 @@ A variety of sources provides data:
 --Database for Radioactive Substance Monitoring Data - Japan
 
 ## File Organization
-    data/
-    |
-    |__ external/
-    |
-    |__ processed/
-    
-    reports/
-    |
-    |__ figures/
-    
+
     src/
     |
     |__ data/
+        |
+        |__ germany/        
     |
     |__ tools/
+        |
+        |__germany
+        |
+        |__japan
+        |
+        |__uk
+        |
+        |__us
     |
     |__ vizualizations/
