@@ -5,3 +5,22 @@ A variety of sources provides data:
 --RADNet.db is an SQLite database file with all available data as pulled from the EPA's Envirofacts RESTful API on 2023.09.30. The database is structured as shown here: https://www.epa.gov/enviro/radnet-model
 --Bundesamt fur Strahlenschutz - Germany
 --Database for Radioactive Substance Monitoring Data - Japan
+
+## File Organization
+    data/
+    |
+    |__ external/
+    |
+    |__ processed/
+    
+    reports/
+    |
+    |__ figures/
+    
+    src/
+    |
+    |__ data/
+    |
+    |__ tools/
+    |
+    |__ vizualizations/
