@@ -1,27 +1,18 @@
 # ISTA498-Capstone
-Group Capstone Project for the University of Arizona ISTA 498
+## Project Radiance: Group Capstone Project for the University of Arizona ISTA 498
+### Team Members:
+* ###  Nate Cutler (Project Manager, [Germany](https://github.com/dessak/ISTA498-Capstone/tree/main/src/tools/germany), [PowerBI Visualizations](https://github.com/dessak/ISTA498-Capstone/tree/main/src/vizualizations))
+* ###  Dessa Keys ([US](https://github.com/dessak/ISTA498-Capstone/tree/main/US), [Tableau Dashboard](https://public.tableau.com/app/profile/dessa2111/viz/ProjectRadiance/Map))
+* ###  Juan Flores ([Japan](https://github.com/dessak/ISTA498-Capstone/tree/main/src/tools/japan), [Poster Design](https://github.com/dessak/ISTA498-Capstone/blob/main/src/vizualizations/ISTA_498_Group_5_Final_Poster.png))
+* ###  Michael Lord ([UK](https://github.com/dessak/ISTA498-Capstone/tree/main/UK))
 
-A variety of sources provides data:
---RADNet.db is an SQLite database file with all available data as pulled from the EPA's Envirofacts RESTful API on 2023.09.30. The database is structured as shown here: https://www.epa.gov/enviro/radnet-model
---Bundesamt fur Strahlenschutz - Germany
---Database for Radioactive Substance Monitoring Data - Japan
+This project was conceptualized by Nate Cutler as the capstone project for the team and presented in December 2023. This project in intended to highlight various skills learned for the Information Science degree from the University of Arizona's iSchool and therefore employs various methods and languages.
 
-## File Organization
+Data Sources
+* US: Environmental Protection Agency's RadNet
+* Germany: Bundesamt fur Strahlenschutz 
+* Japan: Database for Radioactive Substance Monitoring Data
+* UK: Department for Energy Security and Net Zero
 
-    src/
-    |
-    |__ data/
-        |
-        |__ germany/        
-    |
-    |__ tools/
-        |
-        |__germany
-        |
-        |__japan
-        |
-        |__uk
-        |
-        |__us
-    |
-    |__ vizualizations/
+### Project Poster
+![Poster](https://github.com/dessak/ISTA498-Capstone/blob/main/src/vizualizations/ISTA_498_Group_5_Final_Poster.png)
