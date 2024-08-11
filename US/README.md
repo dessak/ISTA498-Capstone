@@ -5,19 +5,22 @@ This module uses the EPA's RADNet data available at https://www.epa.gov/radnet/r
 
 ### Extract
   * Downloaded all available .zip files available form RADNet
-  * Used fileconcatination.ipynb to:
+  * Used [fileconcatination.ipynb](https://github.com/dessak/ISTA498-Capstone/blob/main/US/FileConcatination.ipynb) to:
       - Extract contents of .zip files
       - Read .csv files into single dataframe
       - Save dataframe as SQLite database
 ### Transform
-Using Database Exploaration.ipynb:
-  * Rows with no gamma count values were removed
+Using [Capstone_Notebook.ipynb](https://github.com/dessak/ISTA498-Capstone/blob/main/US/Capstone_Notebook.ipynb) (Google Collab Notebook):
+  * Seperated in Gamma Count Values (GCM) and Exposure Equivalent Rate (ECR) tables
+  * Removed rows that had NaNs
   * Gamma counts were averaged into 'Counts per minute mean'
-  * Counts per minute mean was summed into a daily value
+  * Counts per minute mean and does equivalent rates were averaged into dialy values
   * Due to large diferences in values by location, values were converted into z-scores
 ### Load
   * Values were loaded into Tableau Public
   * Dashboard was created with [map visualization](https://public.tableau.com/app/profile/dessa2111/viz/ProjectRadiance/Map)
 
 ### Insights
-While events like the Fukushima Daiichi nuclear accident had no apparent affect on levels in the US, seasonal flucuations became apparent.
+While events like the Fukushima Daiichi nuclear accident had no apparent affect on levels in the US, seasonal flucuations became apparent. Large gaps in readings exist can can be visulized in the below examples for Chicago, IL.
+![Dose Equivalent Rate](https://github.com/dessak/ISTA498-Capstone/blob/main/US/Chicago_DER.png)
+![Gamma Count Rate](https://github.com/dessak/ISTA498-Capstone/blob/main/US/Chicago_GCR.png)
